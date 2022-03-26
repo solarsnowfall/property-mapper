@@ -11,7 +11,7 @@ abstract class PropertyMapper
      * @param int $visibility
      * @return $this
      */
-    public function importProperties(array $properties, int $visibility = Visibility::ALL): PropertyMapper
+    public function importProperties(array $properties, int $visibility = Visibility::ACCESSIBLE): PropertyMapper
     {
         foreach (static::listProperties($visibility) as $name)
             if (array_key_exists($name, $properties))
@@ -24,7 +24,7 @@ abstract class PropertyMapper
      * @param int $visibility
      * @return array
      */
-    public function exportProperties(int $visibility = Visibility::ALL): array
+    public function exportProperties(int $visibility = Visibility::ACCESSIBLE): array
     {
         $properties = [];
 
@@ -38,7 +38,7 @@ abstract class PropertyMapper
      * @param int $visibility
      * @return array
      */
-    public static function listProperties(int $visibility = Visibility::ALL): array
+    public static function listProperties(int $visibility = Visibility::ACCESSIBLE): array
     {
         $reflection = new \ReflectionClass(get_called_class());
 
