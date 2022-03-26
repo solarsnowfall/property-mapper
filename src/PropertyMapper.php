@@ -24,7 +24,7 @@ abstract class PropertyMapper
      * @param int $visibility
      * @return array
      */
-    public function exportProperties(int $visibility = Visibility::ALL)
+    public function exportProperties(int $visibility = Visibility::ALL): array
     {
         $properties = [];
 
