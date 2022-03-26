@@ -1,5 +1,5 @@
 {
-  "name": "solarsnowfall/string-convention",
+  "name": "solarsnowfall/property-mapper",
   "description": "Simple property mapping basis for ORM.",
   "license": "MIT",
   "authors": [
