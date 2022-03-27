@@ -1,17 +1,15 @@
 <?php
 
-namespace Solarsnowfall;
+namespace Solarsnowfall\Property;
 
-use Solarsnowfall\Property\Visibility;
-
-abstract class PropertyMapper
+abstract class Mapper
 {
     /**
      * @param array $properties
      * @param int $visibility
      * @return $this
      */
-    public function importProperties(array $properties, int $visibility = Visibility::ACCESSIBLE): PropertyMapper
+    public function importProperties(array $properties, int $visibility = Visibility::ACCESSIBLE): Mapper
     {
         foreach (static::listProperties($visibility) as $name)
             if (array_key_exists($name, $properties))
