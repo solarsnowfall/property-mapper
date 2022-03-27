@@ -5,6 +5,18 @@ namespace Solarsnowfall\Property;
 abstract class Mapper
 {
     /**
+     * @param int $visibility
+     * @return $this
+     */
+    public function destroyProperties(int $visibility = Visibility::ACCESSIBLE): Mapper
+    {
+        foreach (static::listProperties($visibility) as $name)
+            unset($this->$name);
+
+        return $this;
+    }
+
+    /**
      * @param array $properties
      * @param int $visibility
      * @return $this
@@ -47,5 +59,17 @@ abstract class Mapper
                 $properties[] = $property->name;
 
         return $properties;
+    }
+
+    /**
+     * @param array $properties
+     * @return $this
+     */
+    public function unsetProperties(array $properties): Mapper
+    {
+        foreach ($properties as $name)
+            unset($this->$name);
+
+        return $this;
     }
 }
