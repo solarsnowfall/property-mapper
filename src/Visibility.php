@@ -10,7 +10,7 @@ class Visibility
 
     const PRIVATE = \ReflectionProperty::IS_PRIVATE;
 
-    const PROTECTED = \ReflectionProperty::IS_PRIVATE;
+    const PROTECTED = \ReflectionProperty::IS_PROTECTED;
 
     const PUBLIC = \ReflectionProperty::IS_PUBLIC;
 }
