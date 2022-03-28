@@ -31,7 +31,7 @@ abstract class Mapper
         if (!property_exists($this, $property))
             trigger_error("Call to undefined method " . get_called_class() . "::{$name}()", E_USER_ERROR);
 
-        if ($property === 'get')
+        if ($prefix === 'get')
             return $this->$property;
 
         if (!count($arguments))
