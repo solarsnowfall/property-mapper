@@ -2,6 +2,11 @@
   "name": "solarsnowfall/property-mapper",
   "description": "Simple property mapping basis for ORM.",
   "license": "MIT",
+  "keywords": [
+    "orm",
+    "object relational mapping",
+    "property mapping"
+  ],
   "authors": [
     {
       "name": "Travis Miller",
